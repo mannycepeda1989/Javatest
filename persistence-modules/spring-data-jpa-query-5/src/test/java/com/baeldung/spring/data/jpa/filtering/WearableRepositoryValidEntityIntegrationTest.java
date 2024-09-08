@@ -19,19 +19,19 @@ import static org.assertj.core.api.Assertions.assertThat;
 })
 @EntityScan(basePackages = "com.baeldung.spring.data.jpa.filtering")
 @ComponentScan(excludeFilters = @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE,
-        value = {SensaWearInvalidEntity.class}))
+        value = {WearableInvalidEntity.class}))
 @EnableJpaRepositories(
-        basePackageClasses = SensaWearRepository.class,
-        excludeFilters = @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, value = SensaWearBrokenRepository.class)
+        basePackageClasses = WearableRepository.class,
+        excludeFilters = @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, value = WearableBrokenRepository.class)
 )
-public class SensaWearRepositoryWithValidEntityDefinitionIntegrationTest {
+public class WearableRepositoryValidEntityIntegrationTest {
 
     @Autowired
-    private SensaWearRepository sensaWearRepository;
+    private WearableRepository wearableRepository;
 
     @Test
     public void fetchWearablesListUsingCustomQueryThenAllOfThemPresent() {
-        List<SensaWearValidEntity> wearables = sensaWearRepository.findAllByOrderByPriceAscSensorTypeAscPopularityIndexDesc();
+        List<WearableValidEntity> wearables = wearableRepository.findAllByOrderByPriceAscSensorTypeAscPopularityIndexDesc();
         assertThat(wearables).hasSize(4);
 
         assertEntityFields(wearables.get(0), "SensaTag", "120.00", "Proximity", 2);
@@ -41,7 +41,7 @@ public class SensaWearRepositoryWithValidEntityDefinitionIntegrationTest {
     }
 
     private static void assertEntityFields(
-            SensaWearValidEntity wearable,
+            WearableValidEntity wearable,
             String name,
             String price,
             String sensorType,

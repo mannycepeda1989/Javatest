@@ -14,7 +14,7 @@ import java.math.BigDecimal;
 @Builder
 @Entity
 @Table(name = "wearables")
-public class SensaWearInvalidEntity {
+public class WearableInvalidEntity {
 
     @Id
     @GeneratedValue

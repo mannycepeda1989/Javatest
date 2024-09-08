@@ -17,16 +17,16 @@ import static org.assertj.core.api.Assertions.assertThat;
 @EntityScan(basePackages = "com.baeldung.spring.data.jpa.filtering")
 @ComponentScan(excludeFilters = @ComponentScan.Filter(
         type = FilterType.ASSIGNABLE_TYPE,
-        value = SensaWearValidEntity.class
+        value = WearableValidEntity.class
 ))
-public class SensaWearBrokenRepositoryWithInvalidEntityIntegrationTest {
+public class WearableRepositoryInvalidEntityIntegrationTest {
 
     @Autowired
-    private SensaWearBrokenRepository sensaWearBrokenRepository;
+    private WearableBrokenRepository wearableBrokenRepository;
 
     @Test
     public void testFindByCriteriaFailsWithIncorrectEntity() {
-        assertThat(sensaWearBrokenRepository.findAllByOrderByPriceAscSensorTypeAscPopularityIndexDesc())
+        assertThat(wearableBrokenRepository.findAllByOrderByPriceAscSensorTypeAscPopularityIndexDesc())
                 .hasSize(4);
     }
 

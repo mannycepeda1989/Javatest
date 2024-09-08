@@ -6,8 +6,8 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface SensaWearBrokenRepository extends JpaRepository<SensaWearInvalidEntity, Long> {
-    List<SensaWearInvalidEntity> findAllByOrderByPriceAscSensorTypeAscPopularityIndexDesc();
+public interface WearableRepository extends JpaRepository<WearableValidEntity, Long> {
+    List<WearableValidEntity> findAllByOrderByPriceAscSensorTypeAscPopularityIndexDesc();
 
 }
 
