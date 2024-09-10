@@ -4,6 +4,7 @@ import jxl.*;
 import java.util.Map;
 import java.util.HashMap;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jxl.read.biff.BiffException;
 import java.io.File;
@@ -62,6 +63,11 @@ public class JExcelHelper {
             sheet.addCell(cellLabel);
             Number cellNumber = new Number(1, 2, 20, cellFormat);
             sheet.addCell(cellNumber);
+            
+            Label emptyCellLabel = new Label(0, 3, "", cellFormat);
+            sheet.addCell(emptyCellLabel);
+            emptyCellLabel = new Label(1, 3, "", cellFormat);
+            sheet.addCell(emptyCellLabel);
 			
             workbook.write();
         } finally {
@@ -70,5 +76,17 @@ public class JExcelHelper {
             }
         }
 
+    }
+    
+    public boolean isRowEmpty(Cell[] row) {
+    	if (row == null) {
+            return true;
+        }
+        for (Cell cell : row) {
+            if (cell != null && !cell.getContents().trim().isEmpty()) {
+                return false;
+            }
+        }
+        return true;
     }
 }

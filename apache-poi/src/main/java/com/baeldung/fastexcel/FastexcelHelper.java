@@ -18,6 +18,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Stream;
+import java.util.stream.StreamSupport;
 
 public class FastexcelHelper {
 
@@ -59,5 +60,17 @@ public class FastexcelHelper {
             ws.value(2, 0, "John Smith");
             ws.value(2, 1, 20L);
         }
+    }
+    
+    public boolean isRowEmpty(Row row) {
+    	if (row == null) {
+            return true;
+        }
+    	for (Cell cell : row) {
+            if (cell != null && !cell.getText().isEmpty()) {
+                return false;
+            }
+        }
+        return true;
     }
 }
