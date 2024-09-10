@@ -90,10 +90,8 @@
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
-        <josdk.version>4.6.0</josdk.version>
         <fabric8-client.version>6.9.2</fabric8-client.version>
         <bouncycastle.version>1.77</bouncycastle.version>
-        <slf4j.version>2.0.9</slf4j.version>
         <operator-framework-spring-boot.version>5.4.0</operator-framework-spring-boot.version>
     </properties>
 

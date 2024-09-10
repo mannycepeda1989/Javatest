@@ -6,8 +6,8 @@
     <groupId>com.baeldung.bootique</groupId>
     <artifactId>bootique</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>bootique</name>
     <packaging>jar</packaging>
+    <name>bootique</name>
     <url>http://maven.apache.org</url>
 
     <parent>
@@ -56,6 +56,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
+                <version>${maven-surefire-plugin.version}</version>
                 <configuration>
                     <argLine>
                         --add-opens java.base/java.lang=ALL-UNNAMED

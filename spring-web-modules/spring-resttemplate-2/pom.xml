@@ -5,14 +5,13 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>spring-resttemplate-2</artifactId>
     <version>0.1-SNAPSHOT</version>
-    <name>spring-resttemplate-2</name>
     <packaging>war</packaging>
+    <name>spring-resttemplate-2</name>
 
     <parent>
         <groupId>com.baeldung</groupId>
-        <artifactId>parent-boot-3</artifactId>
+        <artifactId>spring-web-modules</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath>../../parent-boot-3</relativePath>
     </parent>
 
     <dependencies>
@@ -74,7 +73,7 @@
 
     <properties>
         <start-class>com.baeldung.compress.SpringCompressRequestApplication</start-class>
-        <rest-assured.version>3.3.0</rest-assured.version>
+        <rest-assured.version>5.5.0</rest-assured.version>
         <jakarta.servlet-api.version>6.0.0</jakarta.servlet-api.version>
         <jetty.version>11.0.15</jetty.version>
         <spring-boot.version>3.1.5</spring-boot.version>

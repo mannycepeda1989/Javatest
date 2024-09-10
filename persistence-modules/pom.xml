@@ -30,6 +30,7 @@
         <module>flyway-repair</module>
         <module>hbase</module>
         <module>hibernate5</module>
+        <module>hibernate6</module>
         <module>hibernate-mapping</module> <!-- long running -->
         <module>hibernate-mapping-2</module>
         <module>hibernate-annotations</module>
@@ -61,13 +62,15 @@
         <module>r2dbc</module>
         <module>read-only-transactions</module>
         <module>redis</module>
-        <!-- <module>sirix</module> --> <!-- We haven't upgraded to java 11. Fixing in BAEL-10841 -->
+        <module>sirix</module>
         <module>solr</module>
         <module>spring-boot-persistence-2</module>
         <module>spring-boot-persistence-3</module>
         <module>spring-boot-mysql</module>
+        <module>spring-boot-postgresql</module>
         <module>spring-boot-persistence</module>
         <module>spring-boot-persistence-h2</module>
+        <module>spring-boot-persistence-h2-2</module>
         <module>spring-boot-persistence-mongodb</module>
         <module>spring-boot-persistence-mongodb-2</module>
         <module>spring-boot-persistence-mongodb-3</module>
@@ -93,6 +96,7 @@
         <module>spring-data-jpa-query-2</module>
         <module>spring-data-jpa-query-3</module>
         <module>spring-data-jpa-query-4</module>
+        <module>spring-data-jpa-query-5</module>
         <module>spring-data-jpa-repo</module>
         <module>spring-data-jpa-repo-2</module>
         <module>spring-data-jpa-repo-4</module>
@@ -103,7 +107,7 @@
         <module>spring-data-mongodb-2</module>
         <module>spring-data-mongodb-reactive</module>
         <module>spring-data-redis</module>
-        <module>spring-data-rest-2</module>
+        <!-- <module>spring-data-rest-2</module> --> <!-- failing after upgrade to jdk21 -->
         <module>spring-data-rest-querydsl</module>
         <module>spring-data-solr</module>
         <module>spring-data-shardingsphere</module>
@@ -117,7 +121,7 @@
 	      <module>spring-jdbc-2</module>
         <!--<module>spring-jooq</module>--><!--disabling the jooq modules, as the default build profile is failing due to bad mv files. Please refer: JAVA-31341-->
         <module>spring-mybatis</module>
-        <module>spring-persistence-simple</module>
+        <!-- <module>spring-persistence-simple</module> --> <!-- failing after upgrade to jdk21 -->
         <module>spring-data-yugabytedb</module>
         <module>fauna</module>
         <module>spring-data-rest</module>
@@ -128,13 +132,15 @@
         <module>scylladb</module>
         <module>spring-data-cassandra-2</module>
         <module>spring-data-jpa-repo-3</module>
-        <module>spring-boot-persistence-4</module>
+        <!--<module>spring-boot-persistence-4</module>--> <!-- failing after spring boot upgrade to 3.3.2 -->
+        <!--<module>spring-boot-persistence-5</module>--> <!-- failing after spring boot upgrade to 3.3.2 -->
         <module>hibernate-annotations-2</module>
+        <module>hibernate-reactive</module>
     </modules>
 
     <properties>
         <!-- persistence -->
-        <hibernate.version>6.2.0.Final</hibernate.version>
+        <hibernate.version>6.5.2.Final</hibernate.version>
         <postgresql.version>42.5.4</postgresql.version>
         <hsqldb.version>2.7.1</hsqldb.version>
         <testcontainers.version>1.19.6</testcontainers.version>

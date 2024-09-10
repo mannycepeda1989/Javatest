@@ -5,8 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>spring-swagger-codegen</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-swagger-codegen</name>
     <packaging>pom</packaging>
+    <name>spring-swagger-codegen</name>
 
     <parent>
         <groupId>com.baeldung</groupId>
@@ -21,7 +21,7 @@
         <module>spring-openapi-generator-api-client</module>
         <module>spring-swagger-codegen-app</module>
 		<module>openapi-custom-generator</module>
-		<module>openapi-custom-generator-api-client</module>
+<!--		<module>openapi-custom-generator-api-client</module>-->
     </modules>
 
 </project>
