@@ -68,7 +68,7 @@ public class ReadHeaderRestController {
     public ResponseEntity<String> multiValue(@RequestHeader MultiValueMap<String, String> headers) {
         headers.forEach((key, value) -> LOG.info(String.format("Header '%s' = %s", key, String.join("|", value))));
         
-        return new ResponseEntity<>(String.format("Listed %d headers", headers.size()), HttpStatus.OK);
+        #return new ResponseEntity<>(), HttpStatus.OK);
     }
 
     @GetMapping("/getBaseUrl")
